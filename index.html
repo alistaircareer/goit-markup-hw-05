@@ -30,13 +30,13 @@
             </div>   
         </header>
         <main class="main">
-            <section class="section-hero">
+            <section class="section section-hero">
                 <div class="container">
                     <h1 class="hero-title">Effective Solutions<br> For Your Business</h1>                    
-                    <button type="button" class="hero-button">Order Service</button>
+                    <button type="button" class="hero-button" data-modal-open>Order Service</button>
                 </div>
             </section>
-            <section class="section-feature">
+            <section class="section section-feature">
                 <div class="container">
                     <h2 class="feature-title" hidden>features</h2>
                     <ul class="features-list">
@@ -79,7 +79,7 @@
                     </ul>
                 </div>
             </section>
-            <section class="section-services">
+            <section class="section section-services">
                 <div class="container">
                     <h2 class="services-title">What are we doing</h2>
                     <ul class="services-list-pictures">
@@ -89,7 +89,7 @@
                     </ul>
                 </div>
             </section>               
-            <section class="section ourteam">
+            <section class="section section-ourteam">
                 <div class="container">
                     <h2 class="ourteam-title">Our Team</h2>
                     <ul class="ourteam-list">
@@ -148,39 +148,45 @@
                     </ul>
                 </div>
             </section>
-            <section class="section ourcustomers">
+            <section class="section section-ourcustomers">
                 <div class="container">
                     <h2 class="ourcustomers-title"> Our Customers</h2>
                     <ul class="ourcustomers-list">
                         <li class="ourcustomers-list-item">
-                            <svg class="ourcustomers-list-item-icons">
+                            <a class="ourcustomers-list-item-link"><svg class="ourcustomers-list-item-icons">
                                 <use href="./images/icons.svg#client-1">
-                            </svg>
+                            </svg></a>
+       
                         </li>
                         <li class="ourcustomers-list-item">
-                            <svg class="ourcustomers-list-item-icons">
+                            <a class="ourcustomers-list-item-link"><svg class="ourcustomers-list-item-icons">
                                 <use href="./images/icons.svg#client-2">
-                            </svg>
+                            </svg></a>
+       
                         </li>
                         <li class="ourcustomers-list-item">
-                            <svg class="ourcustomers-list-item-icons">
+                            <a class="ourcustomers-list-item-link"><svg class="ourcustomers-list-item-icons">
                                 <use href="./images/icons.svg#client-3">
-                            </svg>
+                            </svg></a>
+       
                         </li>
                         <li class="ourcustomers-list-item">
-                            <svg class="ourcustomers-list-item-icons">
+                            <a class="ourcustomers-list-item-link"><svg class="ourcustomers-list-item-icons">
                                 <use href="./images/icons.svg#client-4">
-                            </svg>
+                            </svg></a>
+       
                         </li>
                         <li class="ourcustomers-list-item">
-                            <svg class="ourcustomers-list-item-icons">
+                            <a class="ourcustomers-list-item-link"><svg class="ourcustomers-list-item-icons">
                                 <use href="./images/icons.svg#client-5">
-                            </svg>
+                            </svg></a>
+       
                         </li>
                         <li class="ourcustomers-list-item">
-                            <svg class="ourcustomers-list-item-icons">
+                            <a class="ourcustomers-list-item-link"><svg class="ourcustomers-list-item-icons">
                                 <use href="./images/icons.svg#client-6">
-                            </svg>
+                            </svg></a>
+       
                         </li>
                     </ul>
 
@@ -204,5 +210,20 @@
                 </div>
             </div>
         </footer>
+        <div class="modal is-hidden" data-modal >
+            <div class="modal-content">
+                <button class="modal-content-button" data-modal-close><svg class="modal-content-icon"><use class="modal-content-icon-svg" href="./images/icons.svg#close"></use></svg></button>
+                <form class="model-form">
+                    <label class="modal-form-username" for="user_email">Email</label>
+                    <input class="modal-form-username-input" type="email" name="email" id="user_email" placeholder="johndoe@example.com" required/>
+                  
+                    <label class="modal-form-password" for="user_password">Password</label>
+                    <input class="modal-form-password-input" type="password" name="password" id="user_password" minlength="6" maxlength="12" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" title="Please include at least 1 uppercase character, 1 lowercase character, and 1 number." required/>
+                  
+                    <button class="modal-form-submit" type="submit">Submit</button>
+                  </form>
+            </div>
+        </div>
+        <script src="./js/modal.js"></script>
     </body>
 </html>

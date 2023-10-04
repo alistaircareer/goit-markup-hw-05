@@ -40,8 +40,8 @@ a {
 .container {
     width: 1158px;
     margin: 0 auto;}
-section {
-    padding-bottom: 120px;}
+.section {
+    padding: 120px 0;}
 .logo {
     color: var(--navyblue);
     font-family: 'Raleway',sans-serif;
@@ -79,7 +79,7 @@ section {
     text-transform: capitalize;
     position: relative;
 }
-.address-item-link:hover, .address-item-link:focus, .address-item-link:active {
+.nav-item:hover .nav-item-link, .address-item-link:hover, .address-item-link:focus, .address-item-link:active {
     color: var(--ocean);}
 .nav-item-link {
     color: var(--navyblue);
@@ -117,7 +117,6 @@ section {
     background-repeat: no-repeat;
     background-position: center;
     flex-shrink: 0;
-    padding: 120px;
 }
 .hero-title {
     color: var(--white);
@@ -144,12 +143,9 @@ section {
 .hero-button:focus {
     background-color: var(--ocean);}
 .feature-section {
-    width: 1440px;
     height: 2592px;
-    padding-top:120px;
 }
 .features-list {
-    margin-top: 120px;
     display: flex;
     justify-content: space-between;
     gap: 8px;
@@ -159,6 +155,10 @@ section {
     width: 264px;
     flex-direction: column;
     align-items: flex-start;
+}
+.feature-list-item-title{
+    margin-top: 8px;
+    margin-bottom: 8px;
 }
 .features-list-item-container{
     background-color: var(--cloud);
@@ -190,10 +190,6 @@ section {
     line-height: 24px; /* 150% */
     letter-spacing: 0.32px;
 }
-.section-services {
-    width: 1440px;
-    padding: 120px;
-}
 .services-title {
     color: var(--navyblue);
     text-align: center;
@@ -213,9 +209,8 @@ section {
     width: 360px;
     height: 300px;
 }
-.ourteam {
+.section-ourteam {
     background-color: var(--cloud);
-    padding: 120px;
 }
 .ourteam-title {
     color: var(--navyblue);
@@ -237,7 +232,6 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 8px;
     padding-top: 32px;
     padding-bottom: 32px;
     border-radius: 0px 0px 4px 4px;
@@ -281,6 +275,11 @@ section {
     letter-spacing: 0.72px;
     text-transform: capitalize;
 }
+.ourcustomers-list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .ourcustomers-list-item {
     display: inline-block;
     align-items: center;
@@ -290,10 +289,15 @@ section {
     gap: 24px;
     border-radius: 4px;
     border: 1px solid var(--light-slate);
-
+    fill:var(--light-slate)
+}
+.ourcustomers-list-item:hover{
+    fill: var(--ocean);
+    border: 1px solid var(--ocean);
 }
 .ourcustomers-list-item-icons{
     display:block;
+    justify-content: center;
     width: 104px;
     height: 56px;
     margin-top: 16px;
@@ -354,35 +358,43 @@ section {
     flex-direction: column;
     align-items: flex-start;
     align-self: stretch;
-    padding: 0 16px;
+    padding: 32px 16px;
 
 }
-.demo-list-item-card::after{
-    content:"4 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App";
-    display:block;
-    position: absolute;
-    background: var(--green);
-    top:289px;
-    left:160px;
-}
-.demo-list-item:hover .demo-list-item-card::after{
-    width:360px;
-    height:360px;
-}
-
 .demo-list-item-pictures {
     width: 360px;
     height: 360px;
 }
-.demo-list-item-subtitle {
-    color: var(--SLATE);
+.demo-list-item-list{
+    position: relative;
+    overflow: hidden;
+}
+.demo-list-item-list:hover .demo-list-item-subtitle-2{
+    top:0;
+}
+.demo-list-item-subtitle{
+    color: var(--slate);
     font-size: 16px;
     font-weight: 400;
     line-height: 24px; /* 150% */
     letter-spacing: 0.32px;
 }
+.demo-list-item-subtitle-2{
+    background-color: var(--iris);
+    color: var(--white);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+    letter-spacing: 0.32px;
+    display: block;
+    width: 360px;
+    height:360px;
+    position:absolute;
+    top: 360px;
+    transition: top 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 footer {
-    margin: 100px o;
+    padding: 100px 0;
     background-color: var(--navyblue);
 }
 .footer-container {
@@ -426,6 +438,57 @@ footer {
     height: 16px;
     flex-shrink: 0;
 }
-.footer-list-item-icon-socmed-icon:hover{
+.footer-icon-list-item-icon-svg:hover{
     background-color: var(--green);
 }
+.modal{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+.is-hidden{
+    display: none;
+}
+.modal-content{
+    width: 408px;
+    height: 584px;
+    background-color: #31D0AA;
+}
+.modal-content-button{
+    margin-top: 50px;
+    margin-left: 350px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--iris);
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.modal-content-icon{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.modal-content-icon-svg{
+    fill: var(--light-slate);
+    display:flex;
+    justify-content: space-evenly;
+    width: 264px;
+    margin-top: 24px;
+}
+.modal-form{
+    display:flex;
+    flex-shrink: auto;
+    flex-direction: column;
+}
+.modal-form-username{
+
+}
+.modal-form-username-input{
+}
+.modal-form-password{}
+.modal-form-password-input{}
+.modal-form-submit{}
