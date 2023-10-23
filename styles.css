@@ -89,9 +89,9 @@ a {
     letter-spacing: 0.32px;}
 .nav-item:hover .nav-item-link::after {
     width:100%;
-    background-color:var(--ocean);
 }
 .nav-item-link::after{
+    background-color:var(--ocean);
     content:'';
     height: 4px;
     position: absolute;
@@ -99,6 +99,7 @@ a {
     border: 4px;
     left:0;
     bottom: -25px;
+    width:0;    
 
 }
 .address-list {
@@ -433,7 +434,6 @@ footer {
     border-radius: 50%;
 }
 .footer-list-item-icon-socmed-icon{
-    background-color: var(--iris);
     width: 16px;
     height: 16px;
     flex-shrink: 0;
