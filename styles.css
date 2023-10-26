@@ -86,7 +86,10 @@ a {
     font-size: 16px;
     font-weight: 500;
     line-height: 24px; /* 150% */
-    letter-spacing: 0.32px;}
+    letter-spacing: 0.32px;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1)
+}
+
 .nav-item:hover .nav-item-link::after {
     width:100%;
 }
@@ -99,7 +102,7 @@ a {
     border: 4px;
     left:0;
     bottom: -25px;
-    width:0;    
+    width:0;
 
 }
 .address-list {
